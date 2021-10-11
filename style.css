@@ -108,13 +108,20 @@ button {
   width: 90%;
   margin: auto;
 }
-.breaking span {
-  margin-top: var(--margin);
-}
+
 .breaking .breaking__img {
   width: 100%;
   height: auto;
   margin: auto;
+}
+.breaking .breaking__info{
+  padding:var(--margin) 0;
+}
+.breaking .breaking__info:hover{
+  background-color:rgba(158, 127, 77, 0.39);
+  border-radius: 4px;
+  transition:all 300ms linear;
+
 }
 /*Main news*/
 #mainNews {
