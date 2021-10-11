@@ -67,6 +67,20 @@ button {
 }
 
 /*Braking news*/
+#breakings .breakings__btn {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+#breakings button img {
+  width: 150px;
+  height: 100px;
+}
+#breakings .breakings_rightBtn img {
+  width: 130px;
+  height: 85px;
+}
 #breakings .breaking {
   display: flex;
   margin: var(--margin) 10px;
@@ -75,10 +89,6 @@ button {
 .breaking .breaking__img {
   width: 100%;
   height: 700px;
-}
-#breakings button img {
-  width: 150px;
-  height: 100px;
 }
 
 /*Main news*/
@@ -92,7 +102,7 @@ button {
 /*Main news left*/
 #mainNews__left {
   padding-right: var(--margin);
-  border-right: 1px solid black;
+  border-right: 1px dotted black;
 }
 
 #mainNews__left .mainNews__items {
@@ -120,4 +130,41 @@ button {
 #mainNews__right .mainNews__right_header {
   margin: 0;
   margin-bottom: var(--margin);
+}
+
+/*Ad*/
+#ad {
+  display: flex;
+  width: 100%;
+}
+#ad .ad__items img {
+  width: 200px;
+  height: 200px;
+}
+
+/*Game*/
+#game {
+  width: 100%;
+  height: 500px;
+  border: 1px solid blue;
+}
+
+/*Footer*/
+#footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer img {
+  width: 300px;
+  height: 230px;
+}
+
+@media screen and (max-width: 1250px) {
+  #ad {
+    flex-direction: column;
+    align-items: center;
+  }
+  #ad .mainImg {
+  }
 }
