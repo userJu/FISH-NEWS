@@ -5,13 +5,20 @@ const breaking = document.querySelector('.breaking')
 
 let i = 0
 
-leftBtn.addEventListener('click', (e)=>{
-    console.log('move to left')
+leftBtn.addEventListener('click', ()=>{
+    i++
+    if(i > 3){
+        or = 3-(i %4)
+        deleteBreaking()
+        changeBreaking(or)
+    } else{
+        or = 3 - i
+        deleteBreaking()
+        changeBreaking(or)
+    }
 })
 rightBtn.addEventListener('click',(e)=>{
-    console.log('move to right')
     i++
-
 if(i > 3){
     or = i % 4
     deleteBreaking()
@@ -26,9 +33,9 @@ if(i > 3){
 imgArray = ["1.png", "2.png", "3.jpg", "4.jpg"]
 txtArray =[
     `Gilderoy Lockhart, six solid months at the top of the best seller list was in Flourish and Blotts yesterday signing his new book "Magical Me". The bookstore was crammed full of admiring fans most of which were women. Gilderoy Lockhart Wizard Extraordinaire, bewitches and bedazzles us yet again with another toe-nail-bitting account of his heroic encounters with the dark side. Wrestled with werewolves, defied demons, battled bests, Gilderoy's bewildering bravery never ceases to amaze in this magical masterpiece.[10]`,
-    "22",
-    "33",
-    "44",
+    `The female Muggle communicated, via a machine called Telephone, the Muggle Crime Watchers Hotline, and immediately the Ministry of Magic Witch Watchers was informed. Minister Cornelius Fudge was taken by surprise and sent hundreds of Witch Watcher Special Forces to the Village, but when they arrived there he was gone. Minister was absolutely disappointed to lose Sirius Black. The situation got worse when hundreds of Dementors turned up making the small Dufftown population quiver in panic. It took more than 4 hours for the Special Force to tranquillise what was a great shock for those […]`,
+    `Miss Granger, a plain but ambitious girl, seems to be developing a taste for famous wizards. Her latest prey, sources report, is none other than the Bulgarian Bonbon Viktor Krum. No word yet on how Harry Potter is taking this latest emotional blow.[18]`,
+    `Sturgis Podmore, 38, of number two, Laburnum Gardens, Clapham, has appeared in front of the Wizengamot charged with trespass and attempted robbery at the Ministry of Magic on 31 August. Podmore was arrested by Ministry of Magic watchwizard Eric Munch, who found him attempting to force his way through a top-security door at one o'clock in the morning. Podmore, who refused to speak in his own defence, was convicted on both charges and sentence to six months in Azkaban.`,
 ]
 
 // Add more breakings
