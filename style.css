@@ -115,7 +115,11 @@ button {
   margin: auto;
 }
 .breaking .breaking__info{
-  padding:var(--margin) 0;
+  padding-bottom: var(--margin)
+}
+.breaking .breaking__info h2{
+  display:inline;
+  padding-right:2px;
 }
 .breaking .breaking__info:hover{
   background-color:rgba(158, 127, 77, 0.39);
@@ -152,6 +156,22 @@ button {
 #mainNews__left .mainNews__item .mainNews__item_name{
   cursor: pointer;
 }
+#mainNews__left .mainNews__item h3{
+  margin-bottom:4px;
+  font-weight: bold;
+  text-align: center;
+}
+#mainNews__left .mainNews__item .active{
+  border:3px solid white;
+  background-color: #a3895f;
+  border-radius: 5px;
+}
+#mainNews__left .mainNews__item h3:hover{
+  border:3px solid white;
+  background-color: #a3895f;
+  border-radius: 5px;
+}
+
 
 /*Main news right*/
 #mainNews__right {
