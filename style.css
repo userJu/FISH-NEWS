@@ -140,7 +140,7 @@ button {
 }
 #mainNews__left .mainNews__left_img {
   width: 60%;
-  height: auto;
+  height: 80%;
 }
 #mainNews__left .mainNews__items {
   display: flex;
@@ -184,10 +184,11 @@ button {
 #ad .ad__mainImg {
   width: 80%;
   max-width: 630px;
-  position:relative
+  position:relative;
 }
 #ad .ad__top{
   position:relative;
+  flex:1 1 60%;
 }
 #ad .ad__top h2{
   position:absolute;
@@ -207,7 +208,11 @@ button {
   margin: var(--margin);
   padding-left:var(--margin);
   width: 80%;
+  flex:1 1 40%;
   border-left:1px dotted black
+}
+#ad .ad__items .ad__item{
+  padding:5px;
 }
 #ad .ad__items .ad__item:hover{
   background-color:rgba(0, 0, 0, 0.281);
@@ -217,8 +222,8 @@ button {
   transition:all 300ms ease-out
 }
 #ad .ad__items img {
-  width: 200px;
-  height: 200px;
+  width: 180px;
+  height: 180px;
 }
 
 /*Game*/
