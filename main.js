@@ -71,19 +71,27 @@ function deleteBreaking(){
 //Main left 'gentleman's fashion' button click event
 const mainImage = document.querySelector('.mainNews__items')
 const mainItems = document.querySelector('.mainItems')
-console.log(mainImage)
 mainItems.addEventListener('click',(e)=>{
     target = e.target.dataset.value
-    console.log(target)
     const image = document.createElement('img')
     image.src = `images/${target}.png`
     image.classList= 'mainNews__left_img'
     deleteImg()
     mainImage.prepend(image)
+
+    activeBtn(e)
 })
 
 //delete left img
 function deleteImg (){
     const image = mainImage.querySelector('img')
     image.remove()
+}
+
+// click => style btn
+function activeBtn(e){
+    const h3 = mainItems.querySelectorAll('h3')
+    h3.forEach(item=>{item.classList.remove('active')})
+    const target = e.target
+    target.classList.add('active')
 }
