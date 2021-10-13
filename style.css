@@ -25,9 +25,12 @@ h2 {
 
   font-size: 35px;
 }
-
+h3{
+  font-size:20px;
+}
 span {
   font-family: var(--body-font);
+  font-size:16px;
 }
 li {
   list-style: none;
@@ -133,6 +136,8 @@ button {
   flex-direction: row;
   border: 2px solid black;
   margin: var(--margin);
+  margin-bottom: 60px;
+
 }
 
 /*Main news left*/
@@ -140,7 +145,6 @@ button {
   padding-right: var(--margin);
   border-right: 1px dotted black;
   flex: 60%;
-  margin-bottom: 40px;
 }
 #mainNews__left .mainNews__left_img {
   width: 60%;
@@ -179,7 +183,9 @@ button {
   margin-right: var(--margin);
   flex: 40%;
 }
-
+.mainNews__rightNews:last-child{
+  margin-bottom:var(--margin);
+}
 .mainNews__rightNews img {
   width: 300px;
   height: 200px;
@@ -332,6 +338,15 @@ button {
   h1 {
     font-size: 40px;
   }
+  h2 {
+    font-size: 30px;
+  }
+  h3 {
+    font-size:16px;
+  }
+  span {
+    font-size:12px;
+  }
   #header{
     padding:0px;
   }
@@ -345,9 +360,13 @@ button {
     margin-top: 100px;
     padding: var(--margin);
   }
+  #ad .ad__top h2{
+    font-size:40px;
+  }
   #ad .ad__items img {
     width: 150px;
     height: 150px;
     transition:all 300ms linear;
   }
+
 }
