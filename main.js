@@ -17,7 +17,7 @@ leftBtn.addEventListener('click', ()=>{
         changeBreaking(or)
     }
 })
-rightBtn.addEventListener('click',(e)=>{
+rightBtn.addEventListener('click',()=>{
     i++
 if(i > 3){
     or = i % 4
@@ -72,7 +72,7 @@ function deleteBreaking(){
 const mainImage = document.querySelector('.mainNews__items')
 const mainItems = document.querySelector('.mainItems')
 mainItems.addEventListener('click',(e)=>{
-    target = e.target.dataset.value
+    const target = e.target.dataset.value !== undefined ? e.target.dataset.value : e.target.stopImmediatePropagation()
     const image = document.createElement('img')
     image.src = `images/${target}.png`
     image.classList= 'mainNews__left_img'
