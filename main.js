@@ -39,20 +39,20 @@ txtArray =[
 ]
 
 // Add more breakings
+const image = document.createElement("img")
+const breakingInfo = document.querySelector(".breaking__info")
+const span = document.createElement('span')
+const h2 =document.createElement('h2')
+// add more breakings function
 function changeBreaking (or){
-    const image = document.createElement("img")
-    const breakingInfo = document.querySelector(".breaking__info")
-    const span = document.createElement('span')
-    const h2 =document.createElement('h2')
-    
     image.classList ="breaking__img"
     breaking.prepend(image)
     image.src = `images/breaking/breaking${imgArray[or]}`
 
     breakingInfo.prepend(span)
-    span.innerText = txtArray[or]
+    span.innerText = txtArray[or].slice(1)
     span.prepend(h2)
-    h2.innerText = span.innerText.substr(0,1)
+    h2.innerText = txtArray[or].substr(0,1)
 }
 changeBreaking(0)
 
@@ -72,7 +72,7 @@ function deleteBreaking(){
 const mainImage = document.querySelector('.mainNews__items')
 const mainItems = document.querySelector('.mainItems')
 mainItems.addEventListener('click',(e)=>{
-    const target = e.target.dataset.value !== undefined ? e.target.dataset.value : e.target.stopImmediatePropagation()
+    const target = e.target.dataset.value !== undefined ? e.target.dataset.value : e.target.stopPropagation()
     const image = document.createElement('img')
     image.src = `images/${target}.png`
     image.classList= 'mainNews__left_img'

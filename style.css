@@ -184,6 +184,8 @@ button {
   width: 300px;
   height: 200px;
   float: right;
+  margin-left:5px;
+  margin-bottom:5px;
 }
 #mainNews__right .mainNews__rightNews {
   padding: var(--margin);
