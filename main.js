@@ -9,26 +9,18 @@ leftBtn.addEventListener('click', ()=>{
     i++
     if(i > 3){
         or = 3-(i %4)
-        deleteBreaking()
+        // deleteBreaking()
         changeBreaking(or)
     } else{
         or = 3 - i
-        deleteBreaking()
+        // deleteBreaking()
         changeBreaking(or)
     }
 })
 rightBtn.addEventListener('click',()=>{
-    i++
-if(i > 3){
-    or = i % 4
-    // deleteBreaking()
-    changeBreaking(or)
-} else {
-    or = i
-    // deleteBreaking()
-    changeBreaking(or)
-}
+    rightBtnActive()
 })
+
 
 imgArray = ["1.png", "2.png", "3.jpg", "4.jpg"]
 txtArray =[
@@ -57,7 +49,7 @@ function changeBreaking (or){
 changeBreaking(0)
 
 
-// delete breakings
+// // delete breakings
 // function deleteBreaking(){
 //     const image = document.querySelector(".breaking__img")
 //     const span = breaking.querySelector('span')
@@ -65,8 +57,22 @@ changeBreaking(0)
 //     span.remove()
 // }
 
+function rightBtnActive(){
+    i++
+    if(i > 3){
+        or = i % 4
+        // deleteBreaking()
+        changeBreaking(or)
+    } else {
+        or = i
+        // deleteBreaking()
+        changeBreaking(or)
+    }
+}
 
-
+// Breaking automaticly swipe
+const autoBreakingChange = setInterval(rightBtnActive, 4000)
+window.requestAnimationFrame(autoBreakingChange)
 
 //Main left 'gentleman's fashion' button click event
 const mainImage = document.querySelector('.mainNews__items')
