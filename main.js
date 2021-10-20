@@ -46,7 +46,7 @@ const h2 =document.createElement('h2')
 // add more breakings function
 function changeBreaking (or){
     image.classList ="breaking__img"
-    breaking.prepend(image)
+    breaking.appendChild(image)
     image.src = `images/breaking/breaking${imgArray[or]}`
 
     breakingInfo.prepend(span)
@@ -54,7 +54,6 @@ function changeBreaking (or){
     span.prepend(h2)
     h2.innerText = txtArray[or].substr(0,1)
 }
-changeBreaking(0)
 
 
 // delete breakings
