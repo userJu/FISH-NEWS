@@ -21,11 +21,11 @@ rightBtn.addEventListener('click',()=>{
     i++
 if(i > 3){
     or = i % 4
-    deleteBreaking()
+    // deleteBreaking()
     changeBreaking(or)
 } else {
     or = i
-    deleteBreaking()
+    // deleteBreaking()
     changeBreaking(or)
 }
 })
@@ -54,15 +54,16 @@ function changeBreaking (or){
     span.prepend(h2)
     h2.innerText = txtArray[or].substr(0,1)
 }
+changeBreaking(0)
 
 
 // delete breakings
-function deleteBreaking(){
-    const image = document.querySelector(".breaking__img")
-    const span = breaking.querySelector('span')
-    image.remove()
-    span.remove()
-}
+// function deleteBreaking(){
+//     const image = document.querySelector(".breaking__img")
+//     const span = breaking.querySelector('span')
+//     image.remove()
+//     span.remove()
+// }
 
 
 

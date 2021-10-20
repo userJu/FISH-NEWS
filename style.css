@@ -25,12 +25,12 @@ h2 {
 
   font-size: 35px;
 }
-h3{
-  font-size:20px;
+h3 {
+  font-size: 20px;
 }
 span {
   font-family: var(--body-font);
-  font-size:16px;
+  font-size: 16px;
 }
 li {
   list-style: none;
@@ -77,11 +77,20 @@ button {
 }
 
 /*Braking news*/
+.breaking__header {
+  margin: 0px;
+  margin-top: 40px;
+  text-align: center;
+}
 #breakings {
   display: flex;
-  margin: 40px var(--margin);
-  margin-left:0
   width: 100%;
+  height: 700px;
+  margin: 0 auto 40px auto;
+}
+#breakings .breaking__header {
+  margin: var(--margin);
+  text-align: center;
 }
 
 #breakings button img {
@@ -94,7 +103,7 @@ button {
   background-color: #a3895f;
   border-radius: 50px;
   cursor: pointer;
-  transition:all 300ms ease-out;
+  transition: all 300ms ease-out;
 }
 
 #breakings .breakings_rightBtn img {
@@ -112,30 +121,28 @@ button {
   margin: auto;
 }
 #breakings .breaking {
-  border:1px solid green;
-  width:100%;
-  height:400px;
+  width: 100%;
+  height: 400px;
   overflow: hidden;
-  display:flex;
+  display: flex;
 }
 
 .breaking .breaking__img {
-  width:100%;
-  object-fit:none;
+  width: 100%;
+  object-fit: none;
 }
 
-.breaking .breaking__info{
-  padding-bottom: var(--margin)
+.breakings .breaking__info {
+  padding: var(--margin) 0;
 }
-.breaking .breaking__info h2{
-  display:inline;
-  padding-right:2px;
+.breakings .breaking__info h2 {
+  display: inline;
+  padding-right: 2px;
 }
-.breaking .breaking__info:hover{
-  background-color:rgba(158, 127, 77, 0.39);
+.breakings .breaking__info:hover {
+  background-color: rgba(158, 127, 77, 0.39);
   border-radius: 4px;
-  transition:all 300ms linear;
-
+  transition: all 300ms linear;
 }
 /*Main news*/
 #mainNews {
@@ -144,7 +151,6 @@ button {
   border: 2px solid black;
   margin: var(--margin);
   margin-bottom: 60px;
-
 }
 
 /*Main news left*/
@@ -164,40 +170,39 @@ button {
   text-align: center;
   margin: 0;
 }
-#mainNews__left .mainNews__item .mainNews__item_name{
+#mainNews__left .mainNews__item .mainNews__item_name {
   cursor: pointer;
 }
-#mainNews__left .mainNews__item h3{
-  margin-bottom:4px;
+#mainNews__left .mainNews__item h3 {
+  margin-bottom: 4px;
   font-weight: bold;
   text-align: center;
-  border:3px solid transparent;
+  border: 3px solid transparent;
   background-color: transparent;
   border-radius: 5px;
 }
 #mainNews__left .mainNews__item .active,
-#mainNews__left .mainNews__item h3:hover{
-  border:3px solid white;
+#mainNews__left .mainNews__item h3:hover {
+  border: 3px solid white;
   background-color: #a3895f;
   border-radius: 5px;
-  transition:background-color 300ms linear;
+  transition: background-color 300ms linear;
 }
-
 
 /*Main news right*/
 #mainNews__right {
   margin-right: var(--margin);
   flex: 40%;
 }
-.mainNews__rightNews:last-child{
-  margin-bottom:var(--margin);
+.mainNews__rightNews:last-child {
+  margin-bottom: var(--margin);
 }
 .mainNews__rightNews img {
   width: 300px;
   height: 200px;
   float: right;
-  margin-left:5px;
-  margin-bottom:5px;
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 #mainNews__right .mainNews__rightNews {
   padding: var(--margin);
@@ -212,51 +217,50 @@ button {
   display: flex;
   width: 100%;
   padding-top: var(--margin);
-
 }
-#ad .ad__top{
-  display:flex;
+#ad .ad__top {
+  display: flex;
 }
 #ad .ad__mainImg {
   width: 80%;
   max-width: 630px;
-  position:relative;
+  position: relative;
 }
-#ad .ad__top{
-  position:relative;
-  flex:1 1 60%;
+#ad .ad__top {
+  position: relative;
+  flex: 1 1 60%;
 }
-#ad .ad__top h2{
-  position:absolute;
-  right:50px;
-  font-family:var(--body-font);
+#ad .ad__top h2 {
+  position: absolute;
+  right: 50px;
+  font-family: var(--body-font);
 }
-#ad .ad__top h3{
-  position:absolute;
-  right:50px;
-  top:70px;
+#ad .ad__top h3 {
+  position: absolute;
+  right: 50px;
+  top: 70px;
 }
-#ad .ad__top span{
-  position:absolute;
-  right:10px;
-  top:120px;
+#ad .ad__top span {
+  position: absolute;
+  right: 10px;
+  top: 120px;
 }
 #ad .ad__items {
   margin: var(--margin);
-  padding-left:var(--margin);
+  padding-left: var(--margin);
   width: 80%;
-  flex:1 1 40%;
-  border-left:1px dotted black
+  flex: 1 1 40%;
+  border-left: 1px dotted black;
 }
-#ad .ad__items .ad__item{
-  padding:5px;
+#ad .ad__items .ad__item {
+  padding: 5px;
 }
-#ad .ad__items .ad__item:hover{
-  background-color:rgba(0, 0, 0, 0.281);
+#ad .ad__items .ad__item:hover {
+  background-color: rgba(0, 0, 0, 0.281);
   border-radius: 4px;
-  transform:scale(1.1);
-  cursor:pointer;
-  transition:all 300ms ease-out
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: all 300ms ease-out;
 }
 #ad .ad__items img {
   width: 180px;
@@ -282,9 +286,6 @@ button {
 }
 
 @media screen and (max-width: 1250px) {
-  #breakings {
-    margin: 0;
-  }
   #breakings .breakingsBtn {
     display: none;
   }
@@ -294,9 +295,9 @@ button {
   }
   #ad .ad__items {
     margin: var(--margin);
-    padding-left:0px;
+    padding-left: 0px;
     width: 80%;
-    border-left:none;
+    border-left: none;
   }
   #footer h2 {
     display: none;
@@ -312,34 +313,32 @@ button {
     border-bottom: 1px solid black;
     padding-bottom: 40px;
   }
-  #ad .ad__top{
+  #ad .ad__top {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
   }
-  #ad .ad__top img{
-    order:2;
+  #ad .ad__top img {
+    order: 2;
   }
-  #ad .ad__top .ad__top_info{
-    padding-bottom:var(--margin)
+  #ad .ad__top .ad__top_info {
+    padding-bottom: var(--margin);
   }
   #ad .ad__top h2,
   #ad .ad__top h3,
-  #ad .ad__top span{
+  #ad .ad__top span {
     display: flex;
-    position:static;
-    margin:0
+    position: static;
+    margin: 0;
   }
-  #ad .ad__top h2{
-    margin-top:20px;
-    margin-bottom:10px;
-    font-size:50px;
+  #ad .ad__top h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-size: 50px;
   }
   #ad .ad__items {
-    padding-top:var(--margin)
+    padding-top: var(--margin);
   }
-
-
 }
 
 @media screen and (max-width: 760px) {
@@ -350,32 +349,31 @@ button {
     font-size: 30px;
   }
   h3 {
-    font-size:16px;
+    font-size: 16px;
   }
   span {
-    font-size:12px;
+    font-size: 12px;
   }
-  #header{
-    padding:0px;
+  #header {
+    padding: 0px;
   }
   #header .header__name_img {
     position: absolute;
     width: 180px;
     height: 90px;
-    top:40px;
+    top: 40px;
   }
   #header .header__name {
     margin-top: 100px;
     padding: var(--margin);
   }
 
-  #ad .ad__top h2{
-    font-size:40px;
+  #ad .ad__top h2 {
+    font-size: 40px;
   }
   #ad .ad__items img {
     width: 150px;
     height: 150px;
-    transition:all 300ms linear;
+    transition: all 300ms linear;
   }
-
 }
