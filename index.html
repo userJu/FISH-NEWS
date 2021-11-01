@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@800&display=swap" rel="stylesheet">    
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
 <link rel="stylesheet" href="style.css">
 <script src="main.js" defer></script>
 
@@ -94,29 +95,31 @@
     <!-- Ad -->
     <!-- 동화책으로 변경 -->
     <section class ="sections" id="ad">
-        <div class="ad__top">
-        <img src="images/ads/mainImg.png" alt="" class="ad__mainImg">
         <div class="ad__top_info">
             <h2>CHILD BOOK</h2>
             <h3>IS WORTH 100% MORE</h3>
             <span>shows every word as you write it</span>
         </div>
-    </div>
         <div class="ad__items">
-            <img src="images/ads/item1.jpg" alt="" class="ad__item">
-            <img src="images/ads/item2.png" alt="" class="ad__item">
-            <img src="images/ads/item3.png" alt="" class="ad__item">
-            <img src="images/ads/item4.png" alt="" class="ad__item">
-            <img src="images/ads/item5.png" alt="" class="ad__item">
-            <img src="images/ads/item6.png" alt="" class="ad__item">
-            <img src="images/ads/item7.png" alt="" class="ad__item">
-            <img src="images/ads/item8.png" alt="" class="ad__item">
-            <img src="images/ads/item9.png" alt="" class="ad__item">
-            <img src="images/ads/item10.png" alt="" class="ad__item">
-            <img src="images/ads/item11.png" alt="" class="ad__item">
-            <img src="images/ads/item12.png" alt="" class="ad__item">
-
+            <img src="images/ads/item1.jpg" alt="" class="ad__item" data-item = "1">
+            <img src="images/ads/item2.png" alt="" class="ad__item" data-item = "2">
+            <img src="images/ads/item3.png" alt="" class="ad__item" data-item = "3">
+            <img src="images/ads/item4.png" alt="" class="ad__item" data-item = "4">
+            <img src="images/ads/item5.png" alt="" class="ad__item" data-item = "5">
+            <img src="images/ads/item6.png" alt="" class="ad__item" data-item = "6">
+            <img src="images/ads/item7.png" alt="" class="ad__item" data-item = "7">
+            <img src="images/ads/item8.png" alt="" class="ad__item" data-item = "8">
+            <img src="images/ads/item9.png" alt="" class="ad__item" data-item = "9">
+            <img src="images/ads/item10.png" alt="" class="ad__item"data-item = "10">
+            <img src="images/ads/item11.png" alt="" class="ad__item"data-item = "11">
+            <img src="images/ads/item12.png" alt="" class="ad__item"data-item = "12">
         </div>
+        <section class="ad__items_popup">
+
+            <button class="popup_close">
+                <i class="fas fa-times"></i>
+            </button>
+        </section>
     </section>
     <!-- Game -->
     <section class ="sections" id="game">
