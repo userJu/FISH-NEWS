@@ -72,13 +72,12 @@ function rightBtnActive(){
 
 // Breaking automaticly swipe
 const autoBreakingChange = setInterval(rightBtnActive, 4000)
-window.requestAnimationFrame(autoBreakingChange)
 
 //Main left 'gentleman's fashion' button click event
 const mainImage = document.querySelector('.mainNews__items')
 const mainItems = document.querySelector('.mainItems')
 mainItems.addEventListener('click',(e)=>{
-    const target = e.target.dataset.value !== undefined ? e.target.dataset.value : e.target.stopPropagation()
+    const target = e.target.dataset.value !== undefined ? e.target.dataset.value : e.target.removeEventListener()
     const image = document.createElement('img')
     image.src = `images/${target}.png`
     image.classList= 'mainNews__left_img'

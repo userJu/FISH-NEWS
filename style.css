@@ -119,11 +119,10 @@ button {
   display: flex;
   flex-direction: column;
   width: 90%;
+  height: 600px;
   margin: auto;
 }
-#breakings .breakings: {
-  background-color: gray;
-}
+
 #breakings .breaking {
   width: 100%;
   height: 400px;
@@ -173,6 +172,7 @@ button {
 #mainNews__left .mainNews__left_img {
   width: 60%;
   height: 80%;
+  margin-top: 30px;
 }
 
 #mainNews__left .mainNews__item .mainNews__item_name {
@@ -203,8 +203,8 @@ button {
   margin-bottom: var(--margin);
 }
 .mainNews__rightNews img {
-  width: 300px;
-  height: 200px;
+  width: 230px;
+  height: 180px;
   float: right;
   margin-left: 5px;
   margin-bottom: 5px;
@@ -219,9 +219,9 @@ button {
 
 /*Ad*/
 #ad {
-  display: flex;
-  width: 100%;
-  padding-top: var(--margin);
+  flex-direction: column;
+  align-items: center;
+  transition: all 300ms ease-in;
 }
 #ad .ad__top {
   display: flex;
@@ -235,27 +235,11 @@ button {
   position: relative;
   flex: 1 1 60%;
 }
-#ad .ad__top h2 {
-  position: absolute;
-  right: 50px;
-  font-family: var(--body-font);
-}
-#ad .ad__top h3 {
-  position: absolute;
-  right: 50px;
-  top: 70px;
-}
-#ad .ad__top span {
-  position: absolute;
-  right: 10px;
-  top: 120px;
-}
+
 #ad .ad__items {
-  margin: var(--margin);
-  padding-left: var(--margin);
-  width: 80%;
-  flex: 1 1 40%;
-  border-left: 1px dotted black;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 #ad .ad__items .ad__item {
   padding: 5px;
@@ -294,16 +278,7 @@ button {
   #breakings .breakingsBtn {
     display: none;
   }
-  #ad {
-    flex-direction: column;
-    align-items: center;
-  }
-  #ad .ad__items {
-    margin: var(--margin);
-    padding-left: 0px;
-    width: 80%;
-    border-left: none;
-  }
+
   #footer h2 {
     display: none;
   }
@@ -317,32 +292,6 @@ button {
     border-right: none;
     border-bottom: 1px solid black;
     padding-bottom: 40px;
-  }
-  #ad .ad__top {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  #ad .ad__top img {
-    order: 2;
-  }
-  #ad .ad__top .ad__top_info {
-    padding-bottom: var(--margin);
-  }
-  #ad .ad__top h2,
-  #ad .ad__top h3,
-  #ad .ad__top span {
-    display: flex;
-    position: static;
-    margin: 0;
-  }
-  #ad .ad__top h2 {
-    margin-top: 20px;
-    margin-bottom: 10px;
-    font-size: 50px;
-  }
-  #ad .ad__items {
-    padding-top: var(--margin);
   }
 }
 
@@ -375,13 +324,7 @@ button {
   .breaking__header {
     font-size: 50px;
   }
-
-  #ad .ad__top h2 {
-    font-size: 40px;
-  }
-  #ad .ad__items img {
-    width: 150px;
-    height: 150px;
-    transition: all 300ms linear;
+  #mainNews__left .mainNews__item span {
+    display: none;
   }
 }
