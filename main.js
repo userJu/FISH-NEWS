@@ -106,11 +106,22 @@ function activeBtn(e) {
 
 //ad
 //동화책 이미지를 클릭하면 일정한 크기의 팝업창을 띄운다(동화책 info를 담은)
-
+const adPopup = document.querySelector(".ad__items_popup");
+const popupMain = document.querySelector(".popup_main");
 const items = document.querySelector(".ad__items");
+const popupClose = document.querySelector(".popup_close");
 items.addEventListener("click", (e) => {
   const target = e.target.dataset.item;
-  const popupImg = document.createElement("img");
-  popupImg.setAttribute("src", `images/ads/item${target}.png`);
-  console.log(popupImg);
+  adPopup.style.visibility = "visible";
+  popupMain.innerHTML = `
+    <img src="images/ads/item${target}" alt="" class="popup_img">
+    <span class="popup_info">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, tenetur voluptatum. Totam libero vero quibusdam soluta laboriosam omnis, vel officiis ducimus ipsum doloribus magni dicta nihil aliquid inventore, provident commodi.
+    </span>
+    `;
 });
+popupClose.addEventListener("click", () => {
+  adPopup.style.visibility = "hidden";
+});
+
+//game

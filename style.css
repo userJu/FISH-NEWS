@@ -223,6 +223,7 @@ button {
   align-items: center;
   transition: all 300ms ease-in;
   position: relative;
+  margin-bottom: 80px;
 }
 #ad .ad__top_info {
   text-align: center;
@@ -252,13 +253,24 @@ button {
   height: 220px;
 }
 #ad .ad__items_popup {
-  width: 90%;
-  height: 500px;
-  top: 100px;
+  width: 80%;
+  height: 300px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 5px;
-  margin: auto var(--margin);
   background-color: rgba(0, 0, 0, 0.781);
   position: absolute;
+  visibility: hidden;
+}
+.ad__items_popup .popup_img {
+  width: 130px;
+  height: 170px;
+  margin: 7px 0 0 7px;
+  border: 5px double white;
+}
+.ad__items_popup .popup_info {
+  color: white;
 }
 .ad__items_popup .popup_close {
   font-size: 20px;
@@ -273,7 +285,42 @@ button {
 #game {
   width: 100%;
   height: 500px;
-  border: 1px solid blue;
+  border-top: 4px dashed black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 50px;
+}
+#game .game__board {
+  width: 90%;
+  height: 90%;
+  border: 1px solid black;
+  background: url("images/game_bg.png") center/cover no-repeat;
+}
+.game__board .game__tools {
+  width: 80px;
+  height: 100px;
+}
+.game__board .game__inWater .fish {
+  width: 80px;
+  height: 40px;
+}
+.game__board .game__popup {
+  margin: auto;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all 300ms ease-in;
+}
+.game__board .game__popup:hover {
+  color: blanchedalmond;
+}
+.game__popup span {
+  font-size: 40px;
+  padding: 10px;
 }
 
 /*Footer*/
@@ -281,10 +328,8 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-#footer img {
-  width: 300px;
-  height: 230px;
+  width: 100%;
+  height: 500px;
 }
 
 @media screen and (max-width: 1250px) {
