@@ -298,27 +298,35 @@ button {
   border: 3px solid black;
   background: url("images/game_bg.png") center/cover no-repeat;
   position: relative;
+  overflow: hidden;
 }
 .game__board .game__tools {
   width: 80px;
   height: 100px;
+  position: absolute;
+  transition: all 300ms ease-out;
+  pointer-events: none;
+}
+.game__board .goBack {
+  top: 100px;
+  left: 100px;
 }
 
 .game__board .fish {
   width: 80px;
   height: 40px;
   position: absolute;
-  transition: all 300ms ease-out;
+  transition: all 1000ms ease-out;
 }
 
 .game__board .game__popup {
-  margin: auto;
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  position: relative;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
   cursor: pointer;
-  transition: all 300ms ease-in;
+  transition: color 300ms ease-in;
 }
 .game__board .hide {
   display: none;

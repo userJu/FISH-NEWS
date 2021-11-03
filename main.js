@@ -171,5 +171,28 @@ let moveSecond = false;
 
 function timerForFishMove() {
   fishPosition();
-  moveSecond = setInterval(fishPosition, 600);
+  moveSecond = setInterval(fishPosition, 1000);
+}
+
+const catchTool = document.querySelector(".game__tools");
+const fishes = document.querySelector(".fishes");
+
+gameBoard.addEventListener("click", (e) => {
+  const target = e.target;
+  catchToolMove(e);
+  console.dir(e);
+  if (target.className === "fish") {
+    target.remove();
+    catchTool.classList.add("goBack");
+  } else {
+    return;
+  }
+});
+
+function catchToolMove(e) {
+  const x = e.offsetX;
+  const y = e.offsetY;
+  catchTool.style.left = `${x}px`;
+  catchTool.style.top = `${y}px`;
+  catchTool.style.transform = "translate(-50%, -50%)";
 }
