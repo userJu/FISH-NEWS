@@ -125,3 +125,51 @@ popupClose.addEventListener("click", () => {
 });
 
 //game
+
+let start = false;
+const gamePopup = document.querySelector(".game__popup");
+gamePopup.addEventListener("click", () => {
+  if (!start) {
+    console.log("시작");
+    hideStartBtn();
+    timerForFishMove();
+  } else {
+    console.log("끝");
+    displayStartBtn();
+  }
+  start = !start;
+});
+
+function hideStartBtn() {
+  gamePopup.classList.add("hide");
+}
+function displayStartBtn() {
+  gamePopup.classList.remove("hide");
+}
+
+const gameBoard = document.querySelector(".game__board");
+const fish = document.querySelectorAll(".fish");
+
+const fishWidth = 80;
+const fishHeight = 40;
+const gameToolsHeight = 100;
+
+function fishPosition() {
+  fish.forEach((item) => {
+    const width = gameBoard.offsetWidth;
+    const height = gameBoard.offsetHeight;
+    const randomY = Math.floor(
+      Math.random() * (height - fishHeight - gameToolsHeight) + gameToolsHeight
+    );
+    const randomX = Math.floor(Math.random() * (width - fishWidth));
+    item.style.top = `${randomY}px`;
+    item.style.left = `${randomX}px`;
+  });
+}
+
+let moveSecond = false;
+
+function timerForFishMove() {
+  fishPosition();
+  moveSecond = setInterval(fishPosition, 600);
+}

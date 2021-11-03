@@ -295,17 +295,22 @@ button {
 #game .game__board {
   width: 90%;
   height: 90%;
-  border: 1px solid black;
+  border: 3px solid black;
   background: url("images/game_bg.png") center/cover no-repeat;
+  position: relative;
 }
 .game__board .game__tools {
   width: 80px;
   height: 100px;
 }
-.game__board .game__inWater .fish {
+
+.game__board .fish {
   width: 80px;
   height: 40px;
+  position: absolute;
+  transition: all 300ms ease-out;
 }
+
 .game__board .game__popup {
   margin: auto;
   color: white;
@@ -314,6 +319,9 @@ button {
   align-items: center;
   cursor: pointer;
   transition: all 300ms ease-in;
+}
+.game__board .hide {
+  display: none;
 }
 .game__board .game__popup:hover {
   color: blanchedalmond;
