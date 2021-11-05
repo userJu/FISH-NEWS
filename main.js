@@ -187,7 +187,7 @@ gameBoard.addEventListener("click", (e) => {
     const fishY = parseInt(target.style.top);
     target.remove();
     catchToolMove(fishX, fishY);
-    catchToolBack(offsetX);
+    catchToolBack(fishX);
     console.log(fishX, fishY);
   } else {
     catchToolMove(offsetX, offsetY);
@@ -202,11 +202,11 @@ function catchToolMove(X, Y) {
   catchTool.style.transform = "translate(-50%, -50%)";
 }
 
-function catchToolBack(offsetX) {
+function catchToolBack(X) {
   // catchTool.style.left = `${x}px`; 문제 => 여기서 x는 물고기의 offsetx 픽셀임
   setTimeout(() => {
     catchTool.style.top = `0px`;
-    catchTool.style.left = `${offsetX}px`;
+    catchTool.style.left = `${X}px`;
   }, 300);
 }
 
