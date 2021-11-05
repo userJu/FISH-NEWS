@@ -34,6 +34,7 @@ span {
 }
 li {
   list-style: none;
+  font-family: var(--body-font);
 }
 button {
   all: unset;
@@ -285,12 +286,13 @@ button {
 #game {
   width: 100%;
   height: 500px;
+  padding: 50px 0px;
   border-top: 4px dashed black;
+  border-bottom: 4px dashed black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-top: 50px;
 }
 #game .game__board {
   width: 90%;
@@ -338,19 +340,15 @@ button {
 
 /*Footer*/
 #footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 100%;
-  height: 500px;
+  height: 200px;
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-around;
 }
 
 @media screen and (max-width: 1250px) {
   #breakings .breakingsBtn {
-    display: none;
-  }
-
-  #footer h2 {
     display: none;
   }
 }
