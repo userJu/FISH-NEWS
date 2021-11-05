@@ -179,32 +179,35 @@ const fishes = document.querySelector(".fishes");
 
 gameBoard.addEventListener("click", (e) => {
   const target = e.target;
-  catchToolMove(e);
+  const offsetX = e.offsetX;
+  const offsetY = e.offsetY;
 
   if (target.className === "fish") {
-    const clientX = e.clientX;
-    console.dir(e);
-
+    const fishX = parseInt(target.style.left);
+    const fishY = parseInt(target.style.top);
     target.remove();
-    catchToolBack(clientX);
+    catchToolMove(fishX, fishY);
+    catchToolBack(offsetX);
+    console.log(fishX, fishY);
   } else {
-    return;
+    catchToolMove(offsetX, offsetY);
+    catchToolBack(offsetX);
   }
 });
 
-function catchToolMove(e) {
-  const x = e.offsetX;
-  const y = e.offsetY;
-  catchTool.style.left = `${x}px`;
-  catchTool.style.top = `${y}px`;
+function catchToolMove(X, Y) {
+  console.log(X, Y);
+  catchTool.style.left = `${X}px`;
+  catchTool.style.top = `${Y}px`;
   catchTool.style.transform = "translate(-50%, -50%)";
 }
 
-function catchToolBack(clientX) {
+function catchToolBack(offsetX) {
   // catchTool.style.left = `${x}px`; 문제 => 여기서 x는 물고기의 offsetx 픽셀임
-  console.log(clientX);
-  catchTool.style.top = `0px`;
-  catchTool.style.left = `${clientX}px`;
+  setTimeout(() => {
+    catchTool.style.top = `0px`;
+    catchTool.style.left = `${offsetX}px`;
+  }, 300);
 }
 
 // 해결해야 할 일
