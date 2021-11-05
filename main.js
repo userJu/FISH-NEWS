@@ -180,10 +180,13 @@ const fishes = document.querySelector(".fishes");
 gameBoard.addEventListener("click", (e) => {
   const target = e.target;
   catchToolMove(e);
-  console.dir(e);
+
   if (target.className === "fish") {
+    const clientX = e.clientX;
+    console.dir(e);
+
     target.remove();
-    catchTool.classList.add("goBack");
+    catchToolBack(clientX);
   } else {
     return;
   }
@@ -196,3 +199,14 @@ function catchToolMove(e) {
   catchTool.style.top = `${y}px`;
   catchTool.style.transform = "translate(-50%, -50%)";
 }
+
+function catchToolBack(clientX) {
+  // catchTool.style.left = `${x}px`; 문제 => 여기서 x는 물고기의 offsetx 픽셀임
+  console.log(clientX);
+  catchTool.style.top = `0px`;
+  catchTool.style.left = `${clientX}px`;
+}
+
+// 해결해야 할 일
+// 1. catchTool의 처음 위치를 고정한다
+// 2. 클릭한 위치로 catchTool이 이동했다가 y좌표 0으로 돌아간다(x는 클릭위치)

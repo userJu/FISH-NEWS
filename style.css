@@ -300,16 +300,13 @@ button {
   position: relative;
   overflow: hidden;
 }
+
 .game__board .game__tools {
   width: 80px;
   height: 100px;
   position: absolute;
   transition: all 300ms ease-out;
   pointer-events: none;
-}
-.game__board .goBack {
-  top: 100px;
-  left: 100px;
 }
 
 .game__board .fish {
