@@ -380,13 +380,10 @@ a {
   color: rgba(82, 51, 3, 0.815);
 }
 
-@media screen and (max-width: 1250px) {
+@media screen and (max-width: 1000px) {
   #breakings .breakingsBtn {
     display: none;
   }
-}
-
-@media screen and (max-width: 1000px) {
   #mainNews {
     flex-direction: column;
   }
