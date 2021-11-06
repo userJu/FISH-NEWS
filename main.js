@@ -171,7 +171,7 @@ let moveSecond = false;
 
 function timerForFishMove() {
   fishPosition();
-  moveSecond = setInterval(fishPosition, 1000);
+  moveSecond = setInterval(fishPosition, 400);
 }
 
 const catchTool = document.querySelector(".game__tools");

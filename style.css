@@ -39,6 +39,11 @@ li {
 button {
   all: unset;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
+
 .sections {
   margin-top: 40px;
 }
@@ -307,7 +312,7 @@ button {
   width: 80px;
   height: 100px;
   position: absolute;
-  transition: all 300ms ease-out;
+  transition: all 300ms ease-in;
   pointer-events: none;
 }
 
@@ -315,7 +320,7 @@ button {
   width: 80px;
   height: 40px;
   position: absolute;
-  transition: all 1000ms ease-out;
+  transition: all 400ms ease-out;
 }
 
 .game__board .game__popup {
@@ -342,9 +347,26 @@ button {
 #footer {
   width: 100%;
   height: 200px;
+  background-color: rgba(158, 127, 77, 0.39);
   padding: 20px 0px;
   display: flex;
   justify-content: space-around;
+}
+.footer__projectInfo .projectInfo__top,
+.footer__developerInfo .developerInfo__contact {
+  color: rgb(88, 88, 88);
+}
+#footer ul {
+  padding: 0px;
+  margin: 5px;
+}
+#footer i {
+  opacity: 0;
+  margin-right: 5px;
+}
+#footer ul:hover i {
+  opacity: 1;
+  color: rgba(82, 51, 3, 0.815);
 }
 
 @media screen and (max-width: 1250px) {
