@@ -75,17 +75,17 @@ const autoBreakingChange = setInterval(rightBtnActive, 4000);
 const mainImage = document.querySelector(".mainNews__items");
 const mainItems = document.querySelector(".mainItems");
 mainItems.addEventListener("click", (e) => {
-  const target =
-    e.target.dataset.value !== undefined
-      ? e.target.dataset.value
-      : e.target.removeEventListener();
-  const image = document.createElement("img");
-  image.src = `images/${target}.png`;
-  image.classList = "mainNews__left_img";
-  deleteImg();
-  mainImage.prepend(image);
-
-  activeBtn(e);
+  if (e.target.classList.value !== "mainNews__item_name") {
+    return;
+  } else {
+    const target = e.target.dataset.value;
+    const image = document.createElement("img");
+    image.src = `images/${target}.png`;
+    image.classList = "mainNews__left_img";
+    deleteImg();
+    mainImage.prepend(image);
+    activeBtn(e);
+  }
 });
 
 //delete left img
@@ -130,11 +130,9 @@ let start = false;
 const gamePopup = document.querySelector(".game__popup");
 gamePopup.addEventListener("click", () => {
   if (!start) {
-    console.log("시작");
     hideStartBtn();
     timerForFishMove();
   } else {
-    console.log("끝");
     displayStartBtn();
   }
   start = !start;
@@ -188,7 +186,6 @@ gameBoard.addEventListener("click", (e) => {
     target.remove();
     catchToolMove(fishX, fishY);
     catchToolBack(fishX);
-    console.log(fishX, fishY);
   } else {
     catchToolMove(offsetX, offsetY);
     catchToolBack(offsetX);
@@ -196,7 +193,6 @@ gameBoard.addEventListener("click", (e) => {
 });
 
 function catchToolMove(X, Y) {
-  console.log(X, Y);
   catchTool.style.left = `${X}px`;
   catchTool.style.top = `${Y}px`;
   catchTool.style.transform = "translate(-50%, -50%)";
