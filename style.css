@@ -15,7 +15,6 @@ body {
   cursor: default;
   margin: 0;
   background-color: var(--color-background);
-  overflow-x: hidden;
 }
 h1 {
   font-family: var(--main-font);
@@ -349,7 +348,7 @@ a {
   width: 100%;
   height: 15vh;
   background-color: rgba(158, 127, 77, 0.39);
-  padding: 20px;
+  padding-top: 10px;
   display: flex;
   justify-content: space-around;
 }
