@@ -119,6 +119,7 @@ items.addEventListener("click", (e) => {
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, tenetur voluptatum. Totam libero vero quibusdam soluta laboriosam omnis, vel officiis ducimus ipsum doloribus magni dicta nihil aliquid inventore, provident commodi.
     </span>
     `;
+  console.log();
 });
 popupClose.addEventListener("click", () => {
   adPopup.style.visibility = "hidden";
@@ -152,6 +153,12 @@ const fishWidth = 80;
 const fishHeight = 40;
 const gameToolsHeight = 100;
 
+let moveSecond = false;
+
+function timerForFishMove() {
+  moveSecond = setInterval(fishPosition, 400);
+}
+
 function fishPosition() {
   fish.forEach((item) => {
     const width = gameBoard.offsetWidth;
@@ -163,13 +170,6 @@ function fishPosition() {
     item.style.top = `${randomY}px`;
     item.style.left = `${randomX}px`;
   });
-}
-
-let moveSecond = false;
-
-function timerForFishMove() {
-  fishPosition();
-  moveSecond = setInterval(fishPosition, 400);
 }
 
 const catchTool = document.querySelector(".game__tools");

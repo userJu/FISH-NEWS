@@ -261,12 +261,12 @@ a {
 #ad .ad__items_popup {
   width: 80%;
   height: 300px;
-  top: 50%;
   left: 50%;
+  top: 50vh;
   transform: translate(-50%, -50%);
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.781);
-  position: absolute;
+  position: fixed;
   visibility: hidden;
 }
 .ad__items_popup .popup_img {
@@ -320,7 +320,7 @@ a {
   width: 80px;
   height: 40px;
   position: absolute;
-  transition: all 400ms cubic-bezier(0.32, -0.04, 0.98, 0.57);
+  transition: all 400ms ease-in-out;
 }
 
 .game__board .game__popup {
@@ -351,6 +351,7 @@ a {
   padding: 10px;
   display: flex;
   justify-content: space-around;
+  box-sizing: border-box;
 }
 .footerTop {
   color: rgb(88, 88, 88);
